@@ -1,0 +1,7 @@
+<svg phx-click="add_point" width="800" height="800">
+  <%= for {x, y} <- @data.points do %>
+    <circle cx="<%= map(x, 0, 1, 0, 800) %>" cy="<%= map(y, 0, 1, 800, 0) %>" r="5" fill="#24DA5E" />
+  <% end %>
+
+  <line x1="0" y1="<%= map(@start_y, 0, 1, 800, 0) %>" x2="800" y2="<%= map(@end_y, 0, 1, 800, 0) %>" stroke-width="1" stroke="#2477DA" />
+</svg>
