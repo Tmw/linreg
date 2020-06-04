@@ -1,4 +1,4 @@
-<svg phx-click="add_point" width="800" height="800">
+<svg phx-click="add_point" style="cursor: pointer;" onclick="void(0);" width="800" height="800">
   <%= for {x, y} <- @data.points do %>
     <circle cx="<%= map(x, 0, 1, 0, 800) %>" cy="<%= map(y, 0, 1, 800, 0) %>" r="5" fill="#24DA5E" />
   <% end %>
